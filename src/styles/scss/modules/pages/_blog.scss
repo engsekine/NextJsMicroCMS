@@ -1,0 +1,114 @@
+@charset "utf-8";
+@use '../variables';
+.blog {
+  padding: 20px 0 100px;
+  @include variables.mq(lg) {
+    padding: 2% 0 10%;
+  }
+  .inner {
+    max-width: 840px;
+    .blogDate {
+      text-align: center;
+    }
+    .blogCategory {
+      display: flex;
+      margin: 0 auto 20px;
+      @include variables.mq(lg) {
+        margin-bottom: 2%;
+      }
+      @include variables.mq(sm) {
+        margin-bottom: 4%;
+      }
+      a {
+        color: variables.$font-first-color;
+        font-size: 1.6rem;
+        text-align: center;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        @include variables.mq(sm) {
+          font-size: 1.4rem;
+        }
+        svg {
+          @include variables.mq(sm) {
+            width: 20px;
+            height: 20px;
+          }
+        }
+      }
+    }
+    .blogH1 {
+      margin-bottom: 60px;
+      text-align: center;
+      @include variables.mq(lg) {
+        margin-bottom: 6%;
+      }
+      @include variables.mq(sm) {
+        margin-bottom: 10%;
+      }
+    }
+
+    .microCMSRichEditor {
+      margin-bottom: 40px;
+      @include variables.mq(lg) {
+        margin-bottom: 4%;
+      }
+      @include variables.mq(sm) {
+        margin-bottom: 8%;
+      }
+    }
+    .blogName {
+      margin-bottom: 60px;
+      @include variables.mq(lg) {
+        margin-bottom: 6%;
+      }
+      @include variables.mq(sm) {
+        margin-bottom: 10%;
+      }
+    }
+    .blogYoutube {
+      max-width: 500px;
+      margin: 0 auto 60px;
+      @include variables.mq(lg) {
+        margin-bottom: 6%;
+      }
+      @include variables.mq(sm) {
+        margin-bottom: 14%;
+      }
+    }
+    .blogEyeCatch {
+      max-width: 500px;
+      margin: 0 auto 60px;
+      @include variables.mq(lg) {
+        margin-bottom: 6%;
+      }
+      @include variables.mq(sm) {
+        margin-bottom: 14%;
+      }
+    }
+    .nextPrev {
+      display: flex;
+      justify-content: space-between;
+      div {
+        max-width: 47%;
+        a {
+          color: variables.$font-first-color;
+          > span {
+            display: block;
+            @include variables.mq(sm) {
+              font-size: 1.2rem;
+            }
+          }
+        }
+      }
+      .prev {
+        margin-right: auto;
+        margin-left: 0;
+      }
+      .next {
+        margin-right: 0;
+        margin-left: auto;
+      }
+    }
+  }
+}
